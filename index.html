@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주식 리서치 대시보드 - 홈</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">📈 Stock Dashboard</div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html" class="active">홈</a></li>
+                        <li><a href="watchlist.html">관심종목</a></li>
+                        <li><a href="news.html">뉴스</a></li>
+                        <li><button class="theme-toggle" id="themeToggle">🌙</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Market Status Bar -->
+    <section class="market-status">
+        <div class="container">
+            <div class="market-status-content" id="marketStatus">
+                <div class="status-item">
+                    <div class="status-label">Loading...</div>
+                    <div class="status-value">-</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <h1>종목 검색</h1>
+            <p class="text-secondary mb-md">종목 코드 또는 기업명을 입력하세요 (예: AAPL, TSLA, MSFT)</p>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="종목 코드 또는 기업명 입력 (예: AAPL, Apple)" autocomplete="off" />
+                    <button class="btn" id="searchBtn">검색</button>
+                </div>
+                <div class="search-dropdown" id="searchDropdown"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="main-layout">
+            <!-- News Feed -->
+            <div class="main-content">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h2 class="card-title">최신 시장 뉴스</h2>
+                            <p class="card-subtitle">실시간 시장 동향을 확인하세요</p>
+                        </div>
+                        <a href="news.html" class="btn btn-small">전체보기</a>
+                    </div>
+                    <div id="newsFeed" class="news-list">
+                        <div class="loading">
+                            <div class="loading-spinner"></div>
+                            <p>뉴스를 불러오는 중...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Watchlist Sidebar -->
+            <aside class="sidebar">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">관심종목</h3>
+                        <a href="watchlist.html" class="btn btn-small btn-secondary">관리</a>
+                    </div>
+                    <div id="watchlistPreview" class="watchlist-preview">
+                        <div class="empty-state">
+                            <div class="empty-state-icon">⭐</div>
+                            <p class="empty-state-text">저장된 종목이 없습니다</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Stock Research Dashboard | Data by Finnhub & ExchangeRate API</p>
+            <p class="text-secondary" style="font-size: 0.875rem; margin-top: 0.5rem;">
+                웹 프로그래밍 과제 | 개발기간: 2025.06.04 ~ 06.07
+            </p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

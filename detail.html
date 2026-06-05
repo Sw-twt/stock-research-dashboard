@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종목 상세 - Stock Dashboard</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">📈 Stock Dashboard</div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html">홈</a></li>
+                        <li><a href="watchlist.html">관심종목</a></li>
+                        <li><a href="news.html">뉴스</a></li>
+                        <li><button class="theme-toggle" id="themeToggle">🌙</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stock Header -->
+    <section class="container" style="margin-top: 2rem;">
+        <div class="stock-header" id="stockHeader">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>종목 정보를 불러오는 중...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab active" data-tab="summary">요약</div>
+            <div class="tab" data-tab="news">뉴스</div>
+        </div>
+
+        <div class="main-layout">
+            <!-- Left Column -->
+            <div class="main-content">
+                <!-- Summary Tab -->
+                <div class="tab-content active" data-content="summary">
+                    <!-- Metrics Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">핵심 재무 지표</h2>
+                        </div>
+                        <div id="metricsTable">
+                            <div class="loading">
+                                <div class="loading-spinner"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Company Info Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">기업 정보</h2>
+                        </div>
+                        <div id="companyInfo">
+                            <div class="loading">
+                                <div class="loading-spinner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Tab -->
+                <div class="tab-content" data-content="news">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">관련 뉴스</h2>
+                        </div>
+                        <div id="companyNews" class="news-list">
+                            <div class="loading">
+                                <div class="loading-spinner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">관련 뉴스</h3>
+                    </div>
+                    <div id="companyNewsSidebar" class="news-list">
+                        <div class="loading">
+                            <div class="loading-spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Stock Research Dashboard | Data by Finnhub & ExchangeRate API</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/detail.js"></script>
+</body>
+</html>

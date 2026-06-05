@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관심종목 - Stock Dashboard</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">📈 Stock Dashboard</div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="index.html">홈</a></li>
+                        <li><a href="watchlist.html" class="active">관심종목</a></li>
+                        <li><a href="news.html">뉴스</a></li>
+                        <li><button class="theme-toggle" id="themeToggle">🌙</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="container" style="margin-top: 2rem;">
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h1 class="card-title">관심종목</h1>
+                    <p class="card-subtitle">저장된 종목을 한눈에 확인하세요</p>
+                </div>
+                <button class="btn btn-danger btn-small" id="clearAllBtn">전체 삭제</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="card">
+            <div id="watchlistContent">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p>관심종목을 불러오는 중...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Stock Research Dashboard | Data by Finnhub & ExchangeRate API</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/watchlist.js"></script>
+</body>
+</html>
